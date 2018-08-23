@@ -2,8 +2,8 @@
 // envento load para que cuando cargue todo el cuerpo de la pagina se introdusca el javascript
 window.addEventListener('load', () => {
 	// Timers
-
-	var tiempo = setInterval(() =>{
+	// setTimeout se ejecuta una vez
+	var tiempo = setTimeout(() =>{
 		console.log("Set interval ejecutado");
 		var encabezado = document.querySelector("h1")
 		if(encabezado.style.fontSize == "50px"){
