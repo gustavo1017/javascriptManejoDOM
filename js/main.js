@@ -1,22 +1,37 @@
 'use strict'
-// BOM - Browser Object Model
-//Propiedades para saber el ancho y el alto del navegador
-function getBom(){
-	console.log(screen.Height);
-	console.log(screen.Width);
-	console.log(window.location.href);
+//enventos del raton
+//
+
+
+function cambiarColor(){
+	console.log("me has dado click");
+	var bg = boton.style.background;
+	if(bg =="green"){
+		boton.style.background ="red";
+
+	}else{
+		boton.style.background = "green";
+	}
+		boton.style.padding ="10px";
+		boton.style.border = "1px solid #ccc";
+	return true;
+
 }
 
-//redireccionar a otra pagina pasandole el url
-function redirect(url){
-	window.location.href = url;
-}
+var boton = document.querySelector("#boton");
+//capturar evento del boton
+boton.addEventListener('click',function(){
+	cambiarColor();
+});
 
-//abrir una nueva ventana con un tamaño definido
-function abrirVentana(url){
-	window.open(url,"","width=400, height=300");
-}
+//Mouse over
+boton.addEventListener('mouseover', function(){
+	boton.style.background = "yellow";
 
-getBom();
+});
 
+//Mouseout
+boton.addEventListener('mouseout', function(){
+	boton.style.background = "#ccc";
+});
 
