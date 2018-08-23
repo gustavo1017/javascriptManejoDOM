@@ -12,6 +12,11 @@ function redirect(url){
 	window.location.href = url;
 }
 
+//abrir una nueva ventana con un tamaño definido
+function abrirVentana(url){
+	window.open(url,"","width=400, height=300");
+}
+
 getBom();
 
 
